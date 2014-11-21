@@ -1,4 +1,4 @@
-yii2-extend
+yii2-simpleapp
 ===========
 
-Few classes that extend some Yii core classes
+Startup scripts to start yii2 basic app faster and few classes that extend some Yii core classes.
