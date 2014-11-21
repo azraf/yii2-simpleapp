@@ -1,0 +1,30 @@
+{
+    "name": "azraf/yii2-simpleapp",
+    "description": "Yii2 application development starter",
+    "keywords": ["yii2", "yii2-simpleapp", "yii2-simple"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/azraf/yii2-simpleapp/issues",
+        "source": "https://github.com/azraf/yii2-simpleapp"
+    },
+    "authors": [
+        {
+            "name": "Dev Azraf",
+            "email": "c.azraf@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "azraf\\simpleapp\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}
