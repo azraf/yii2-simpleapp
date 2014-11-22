@@ -61,7 +61,7 @@ class SimpleController extends Controller
         parent::init();
         
         
-        $this->wtControllerPath = WebThemesController::className();
+        $this->wtControllerPath = SimpleController::className();
         if (\Yii::$app->user->isGuest) {
             
             return $this->redirect(['/user/login']);
