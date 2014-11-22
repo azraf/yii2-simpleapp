@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace azraf\simple;
+namespace azraf\simpleapp;
 
 use yii\base\Component;
 
@@ -19,7 +19,7 @@ use yii\base\Component;
  *
  * @author Dmitry Erofeev <dmeroff@gmail.com>
  */
-class Simple extends Component
+class Simpleapp extends Component
 {
   
 }
