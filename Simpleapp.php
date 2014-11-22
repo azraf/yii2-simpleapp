@@ -15,9 +15,7 @@ namespace azraf\simpleapp;
 use yii\base\Component;
 
 /**
- * Mailer.
- *
- * @author Dmitry Erofeev <dmeroff@gmail.com>
+ * 
  */
 class Simpleapp extends Component
 {
