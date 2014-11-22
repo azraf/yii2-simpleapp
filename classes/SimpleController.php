@@ -165,12 +165,12 @@ class SimpleController extends Controller
     
     /**
      * 
-     * Use this for any testing purpose, by calling this->sExit() 
+     * Use this for any testing purpose, by calling this->q() 
      * from any child class
      * 
      * @param type $exit
      */
-    protected function sExit($exit='')
+    protected function q($exit='')
     {
         exit('--- exit from ' . strVals($exit). ' --- ' . $this->wtChildPath . ' <---> ' . $this->wtControllerPath);
     }
