@@ -17,7 +17,8 @@
  *       ]
  * ]
  * 
- * 
+ * example can be found in
+ * http://blog.makewebsmart.com/yii2-adding-icon-in-menu-with-yii2-simpleapp-class/292
  * 
  * @link https://github.com/azraf/yii2-simpleapp
  * 
