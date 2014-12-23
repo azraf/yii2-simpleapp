@@ -62,8 +62,19 @@ class SimpleNav extends Nav
         } else {
             $active = $this->isItemActive($item);
         }
-
-        if ($items !== null) {
+        
+        if (($items !== null) && isset($item['tpl']) && ($item['tpl'] == 'adminlte')) {
+            if (is_array($items)) {
+                if(empty($linkOptions['i_class_right'])){
+                    $linkOptions['i_class_right'] = 'fa pull-right fa-angle-left';
+                }
+                if ($this->activateItems) {
+                    $items = $this->isChildActive($items, $active);
+                }
+                $items = $this->renderDropdown($items, $item);
+                $items = str_replace('class="dropdown-menu"', 'class="treeview-menu"', $items);
+            }
+        }elseif (($items !== null) && empty($item['tpl'])) {
             $linkOptions['data-toggle'] = 'dropdown';
             Html::addCssClass($options, 'dropdown');
             Html::addCssClass($linkOptions, 'dropdown-toggle');
