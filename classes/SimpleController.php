@@ -67,16 +67,17 @@ class SimpleController extends Controller
             
             return $this->redirect(['/user/login']);
         } else {
-            if(empty($this->wtParams) || empty($this->wtParams['user'])){
-                $this->wtParams = ['user'=>[
-                    'id'=> \Yii::$app->user->identity->id,
-                    'username'=> \Yii::$app->user->identity->username,
-                    'email'=> \Yii::$app->user->identity->email,
-                    ]];
-            }
-            if(!isset($this->wtParams['user']['name']) || empty($this->wtParams['user']['name'])){
-                $this->_setUserName();
-            }
+            SELF::_hooks();
+        }
+    }
+    private function _hooks()
+    {
+        if(empty( \Yii::$app->session->get('user.name'))){
+            $this->_setUserName();
+        }
+
+        if(empty( \Yii::$app->session->get('user.regtime'))){
+            $this->_setUserRegTime();
         }
     }
     
@@ -114,8 +115,16 @@ class SimpleController extends Controller
             \Yii::$app->session->setFlash('warning', 'Please complete your profile first.');
             return $this->redirect(['/user/settings/profile']);
         } else {
-            $this->wtParams['user']['name'] = $profile->name;
+            \Yii::$app->session->set('user.name',$profile->name);
         }
+    }
+    
+    private function _setUserRegTime()
+    {
+        $model = new UserModel;
+        $user = $model->findUserById(\Yii::$app->user->identity->id);
+
+        \Yii::$app->session->set('user.regtime',$user->created_at);
     }
     
     /**
