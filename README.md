@@ -10,4 +10,4 @@ It also creates a session table for session store in DB.
 Documentation
 -------------
 
-Please check http://blog.makewebsmart.com/yii2-simpleapp-with-yii2-admin-user-adminlte-and-few-more/234 for installation instruction of Yii2-simple application.
+Please check http://makewebsmart.com/blog/yii2-simpleapp-with-yii2-admin-user-adminlte-and-few-more/234 for installation instruction of Yii2-simple application.
